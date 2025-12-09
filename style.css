@@ -185,6 +185,9 @@ p, button, a, blockquote{
     padding: 20px;
 }
 
+#about{
+    padding:80px 20px;
+}
 
 .about{
     width: 100%;
@@ -308,49 +311,86 @@ padding: 12px 0;
 }
 
 
-#projects{
-    padding: 100px;
+/* SECTION SPACING */
+#projects {
+    padding: 80px 20px; /* Smaller padding on mobile automatically */
 }
 
-
-#projects .title{
+/* TITLE */
+#projects .title {
     color: #111;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-#projects p{
+/* PARAGRAPHS */
+#projects p {
     line-height: 28px;
 }
 
-.projects{
+/* PROJECTS WRAPPER */
+.projects {
     width: 100%;
-    height: auto;
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 50px;
-    padding: 28px;
+    gap: 40px;
+    padding: 20px;
 }
 
-.project{
-    width:500px;
-    min-height: 450px;
+/* SINGLE PROJECT CARD */
+.project {
+    width: 100%;
+    max-width: 420px; /* Shrinks nicely on smaller screens */
     background-color: #111;
     color: #fff;
     border-radius: 16px;
-    margin-top: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
-.project img{
+
+/* PROJECT IMAGE */
+.project img {
     width: 100%;
+    display: block;
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
 }
-.project h3, p, .buttons{
-    padding: 8px;
+
+/* TEXT + BUTTON SPACING */
+.project h3,
+.project p,
+.project .buttons {
+    padding: 12px 16px;
 }
 
-.project p{
+/* PROJECT TEXT COLOR */
+.project p {
     color: #dfdddd;
+}
+
+
+/* ---------- RESPONSIVE BREAKPOINTS ----------- */
+
+/* Tablets */
+@media (min-width: 600px) {
+    #projects {
+        padding: 100px 40px;
+    }
+    .project {
+        max-width: 480px;
+    }
+}
+
+/* Laptops & desktops */
+@media (min-width: 1024px) {
+    .projects {
+        gap: 50px;
+    }
+    .project {
+        max-width: 500px;
+    }
 }
 
 .buttons{
@@ -592,3 +632,4 @@ cursor: pointer;
      display: none;
   }
 }
+
